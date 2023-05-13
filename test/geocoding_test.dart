@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:google_maps_webservice/geocoding.dart';
+import 'package:google_maps_webapi/geocoding.dart';
 import 'package:test/test.dart';
 
 final _uri = Uri(

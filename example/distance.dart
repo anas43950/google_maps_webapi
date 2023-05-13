@@ -1,9 +1,9 @@
-library google_maps_webservice.distance.example;
+library google_maps_webapi.distance.example;
 
 import 'dart:async';
 import 'dart:io';
 
-import 'package:google_maps_webservice/distance.dart';
+import 'package:google_maps_webapi/distance.dart';
 
 final GoogleDistanceMatrix distanceMatrix =
     GoogleDistanceMatrix(apiKey: Platform.environment['API_KEY']);

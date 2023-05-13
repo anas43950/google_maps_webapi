@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:google_maps_webservice/directions.dart';
-import 'package:google_maps_webservice/src/distance.dart';
+import 'package:google_maps_webapi/directions.dart';
+import 'package:google_maps_webapi/src/distance.dart';
 import 'package:test/test.dart';
 
 final _uri = Uri(

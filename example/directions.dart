@@ -1,9 +1,9 @@
-library google_maps_webservice.directions.example;
+library google_maps_webapi.directions.example;
 
 import 'dart:async';
 import 'dart:io';
 
-import 'package:google_maps_webservice/directions.dart';
+import 'package:google_maps_webapi/directions.dart';
 
 final directions =
     GoogleMapsDirections(apiKey: Platform.environment['API_KEY']);

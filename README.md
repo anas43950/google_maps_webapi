@@ -1,11 +1,11 @@
 <p align="center">
-<a href="https://github.com/lejard-h/google_maps_webservice/actions?query=workflow%3ADart"><img src="https://github.com/lejard-h/google_maps_webservice/workflows/Dart/badge.svg?branch=master" alt="Build Status"></a>
-<a href="https://codecov.io/gh/lejard-h/google_maps_webservice"><img src="https://codecov.io/gh/lejard-h/google_maps_webservice/branch/master/graph/badge.svg" alt="codecov"></a>
-<a href="https://github.com/lejard-h/google_maps_webservice"><img src="https://img.shields.io/github/stars/lejard-h/google_maps_webservice.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
+<a href="https://github.com/rvndsngwn/google_maps_webapi/actions?query=workflow%3ADart"><img src="https://github.com/rvndsngwn/google_maps_webapi/workflows/Dart/badge.svg?branch=master" alt="Build Status"></a>
+<a href="https://codecov.io/gh/lejard-h/google_maps_webapi"><img src="https://codecov.io/gh/lejard-h/google_maps_webapi/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="https://github.com/rvndsngwn/google_maps_webapi"><img src="https://img.shields.io/github/stars/lejard-h/google_maps_webapi.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
 <a href="https://www.buymeacoffee.com/lejardh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="25px"></a>
 </p>
 
-# google_maps_webservice
+# google_maps_webapi
 
 ## General Information
 
@@ -43,7 +43,7 @@ These keys are not to be used individually as Android or iOS API keys, but they 
 ### Geocoding
 
 ```dart
-import "package:google_maps_webservice/geocoding.dart";
+import "package:google_maps_webapi/geocoding.dart";
 
 final geocoding = GoogleMapsGeocoding(apiKey: "<API_KEY>");
 final geocoding = GoogleMapsGeocoding(apiKey: "<API_KEY>", httpClient: BrowserClient());
@@ -55,7 +55,7 @@ GeocodingResponse response = await geocoding.searchByAddress("1600 Amphitheatre 
 ### Places
 
 ```dart
-import "package:google_maps_webservice/places.dart";
+import "package:google_maps_webapi/places.dart";
 
 final places = GoogleMapsPlaces(apiKey: "<API_KEY>");
 final places = GoogleMapsPlaces(apiKey: "<API_KEY>", httpClient: BrowserClient());
@@ -72,7 +72,7 @@ PlacesDetailsResponse response = await places.getDetailsByReference("REF");
 ### Timezone
 
 ```dart
-import "package:google_maps_webservice/timezone.dart";
+import "package:google_maps_webapi/timezone.dart";
 
 final timezone = GoogleMapsTimezone(apiKey: "<API_KEY>");
 final timezone = GoogleMapsTimezone(apiKey: "<API_KEY>", httpClient: BrowserClient());
@@ -116,4 +116,4 @@ The apiKey is not required in case the proxy sets it. (Not storing the apiKey in
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/lejard-h/google_maps_webservice/issues/new
+[tracker]: https://github.com/rvndsngwn/google_maps_webapi/issues/new

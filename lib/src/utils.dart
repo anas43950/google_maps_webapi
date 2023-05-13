@@ -1,4 +1,4 @@
-library google_maps_webservice.utils;
+library google_maps_webapi.utils;
 
 import 'dart:async';
 

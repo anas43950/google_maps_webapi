@@ -1,9 +1,9 @@
-library google_maps_webservice.gelocation.example;
+library google_maps_webapi.gelocation.example;
 
 import 'dart:async';
 import 'dart:io';
 
-import 'package:google_maps_webservice/geolocation.dart';
+import 'package:google_maps_webapi/geolocation.dart';
 
 final geolocation =
     GoogleMapsGeolocation(apiKey: Platform.environment['API_KEY']);
