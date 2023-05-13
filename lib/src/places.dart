@@ -711,12 +711,12 @@ class PlaceDetails {
 
   final bool? delivery;
 
-  final bool? dineIn; 
+  final bool? dineIn;
 
   final PlaceEditorialSummary? editorialSummary;
 
   final String? iconBackgroundColor;
-  
+
   final String? iconMaskBaseUri;
 
   PlaceDetails({
