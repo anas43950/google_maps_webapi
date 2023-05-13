@@ -67,7 +67,8 @@ class GoogleDistanceMatrix extends GoogleWebService {
     String? languageCode,
     bool alternative = false,
     String? region,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const <RouteType>[],
     Unit? unit,
     Object? /*DateTime|num*/ arrivalTime,
@@ -107,7 +108,8 @@ class GoogleDistanceMatrix extends GoogleWebService {
     String? languageCode,
     bool alternative = false,
     String? region,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const <RouteType>[],
     Unit? unit,
     Object? /*DateTime|num*/ arrivalTime,

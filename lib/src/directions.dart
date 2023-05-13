@@ -32,7 +32,8 @@ class GoogleMapsDirections extends GoogleWebService {
     TravelMode? travelMode,
     List<Waypoint> waypoints = const [],
     bool alternatives = false,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const [],
     String? language,
     Unit? units,
@@ -68,7 +69,8 @@ class GoogleMapsDirections extends GoogleWebService {
     TravelMode? travelMode,
     List<Waypoint> waypoints = const [],
     bool alternatives = false,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const [],
     String? language,
     Unit? units,
@@ -103,7 +105,8 @@ class GoogleMapsDirections extends GoogleWebService {
     TravelMode? travelMode,
     List<Waypoint> waypoints = const [],
     bool alternatives = false,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const [],
     String? language,
     Unit? units,
@@ -138,7 +141,8 @@ class GoogleMapsDirections extends GoogleWebService {
     TravelMode? travelMode,
     List<Waypoint> waypoints = const <Waypoint>[],
     bool alternatives = false,
-    @deprecated RouteType? avoid,
+    @Deprecated("[avoid] is deprecated, use [avoids] instead.")
+        RouteType? avoid,
     List<RouteType> avoids = const <RouteType>[],
     String? language,
     Unit? units,
