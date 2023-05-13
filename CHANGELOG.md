@@ -1,4 +1,7 @@
-# Changelog
+## 0.0.21
+
+- Dart fix apply
+- Dependency update
 
 ## 0.0.20-nullsafety.5
 

@@ -1,7 +1,7 @@
 <p align="center">
 <a href="https://github.com/rvndsngwn/google_maps_webapi/actions?query=workflow%3ADart"><img src="https://github.com/rvndsngwn/google_maps_webapi/workflows/Dart/badge.svg?branch=master" alt="Build Status"></a>
-<a href="https://codecov.io/gh/lejard-h/google_maps_webapi"><img src="https://codecov.io/gh/lejard-h/google_maps_webapi/branch/master/graph/badge.svg" alt="codecov"></a>
-<a href="https://github.com/rvndsngwn/google_maps_webapi"><img src="https://img.shields.io/github/stars/lejard-h/google_maps_webapi.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
+<a href="https://codecov.io/gh/rvndsngwn/google_maps_webapi"><img src="https://codecov.io/gh/rvndsngwn/google_maps_webapi/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="https://github.com/rvndsngwn/google_maps_webapi"><img src="https://img.shields.io/github/stars/rvndsngwn/google_maps_webapi.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
 <a href="https://www.buymeacoffee.com/lejardh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="25px"></a>
 </p>
 
