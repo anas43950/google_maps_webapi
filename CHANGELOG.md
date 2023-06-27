@@ -1,3 +1,7 @@
+## 0.0.22
+
+- Dependency update
+
 ## 0.0.21
 
 - Dart fix apply
