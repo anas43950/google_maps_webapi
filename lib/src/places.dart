@@ -154,6 +154,7 @@ class GoogleMapsPlaces extends GoogleWebService {
     List<Component> components = const [],
     bool strictbounds = false,
     String? region,
+    String Function(String url)? urlModifier,
   }) async {
     final url = buildAutocompleteUrl(
       sessionToken: sessionToken,
@@ -167,6 +168,7 @@ class GoogleMapsPlaces extends GoogleWebService {
       components: components,
       strictbounds: strictbounds,
       region: region,
+      urlModifier: urlModifier,
     );
     return _decodeAutocompleteResponse(await doGet(url, headers: apiHeaders));
   }
@@ -376,19 +378,20 @@ class GoogleMapsPlaces extends GoogleWebService {
         .toString();
   }
 
-  String buildAutocompleteUrl(
-      {required String input,
-      String? sessionToken,
-      num? offset,
-      Location? origin,
-      Location? location,
-      num? radius,
-      String? language,
-      List<String> types = const [],
-      List<Component> components = const [],
-      bool strictbounds = false,
-      String? region,
-      String Function(String url)? urlModifier}) {
+  String buildAutocompleteUrl({
+    required String input,
+    String? sessionToken,
+    num? offset,
+    Location? origin,
+    Location? location,
+    num? radius,
+    String? language,
+    List<String> types = const [],
+    List<Component> components = const [],
+    bool strictbounds = false,
+    String? region,
+    String Function(String url)? urlModifier,
+  }) {
     final params = <String, String>{
       'input': input,
     };
