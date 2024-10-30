@@ -24,12 +24,14 @@ class GoogleMapsPlaces extends GoogleWebService {
     String? baseUrl,
     Client? httpClient,
     Map<String, String>? apiHeaders,
+    String Function(String url)? urlModifier,
   }) : super(
           apiKey: apiKey,
           baseUrl: baseUrl,
           apiPath: _placesUrl,
           httpClient: httpClient,
           apiHeaders: apiHeaders,
+          urlModifier: urlModifier,
         );
 
   Future<PlacesSearchResponse> searchNearbyWithRadius(
@@ -154,7 +156,6 @@ class GoogleMapsPlaces extends GoogleWebService {
     List<Component> components = const [],
     bool strictbounds = false,
     String? region,
-    String Function(String url)? urlModifier,
   }) async {
     final url = buildAutocompleteUrl(
       sessionToken: sessionToken,
@@ -168,7 +169,6 @@ class GoogleMapsPlaces extends GoogleWebService {
       components: components,
       strictbounds: strictbounds,
       region: region,
-      urlModifier: urlModifier,
     );
     return _decodeAutocompleteResponse(await doGet(url, headers: apiHeaders));
   }
@@ -390,7 +390,6 @@ class GoogleMapsPlaces extends GoogleWebService {
     List<Component> components = const [],
     bool strictbounds = false,
     String? region,
-    String Function(String url)? urlModifier,
   }) {
     final params = <String, String>{
       'input': input,
@@ -445,9 +444,6 @@ class GoogleMapsPlaces extends GoogleWebService {
           queryParameters: params,
         )
         .toString();
-    if (urlModifier != null) {
-      return urlModifier(finalUrl);
-    }
     return finalUrl;
   }
 

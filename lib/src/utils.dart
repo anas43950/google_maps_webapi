@@ -20,6 +20,9 @@ abstract class GoogleWebService {
   @protected
   final Map<String, String>? _apiHeaders;
 
+  @protected
+  final String Function(String url)? _urlModifier;
+
   Uri get url => _url;
 
   Client get httpClient => _httpClient;
@@ -28,14 +31,18 @@ abstract class GoogleWebService {
 
   Map<String, String>? get apiHeaders => _apiHeaders;
 
+  String Function(String url)? get urlModifier => _urlModifier;
+
   GoogleWebService({
     String? apiKey,
     required String apiPath,
     String? baseUrl,
     Client? httpClient,
     Map<String, String>? apiHeaders,
+    String Function(String url)? urlModifier,
   })  : _httpClient = httpClient ?? Client(),
         _apiKey = apiKey,
+        _urlModifier = urlModifier,
         _apiHeaders = apiHeaders {
     var uri = kGMapsUrl;
 
@@ -65,6 +72,9 @@ abstract class GoogleWebService {
 
   @protected
   Future<Response> doGet(String url, {Map<String, String>? headers}) {
+    if (urlModifier != null) {
+      url = urlModifier!(url);
+    }
     return httpClient.get(Uri.parse(url), headers: headers);
   }
 
@@ -74,6 +84,9 @@ abstract class GoogleWebService {
     String body, {
     Map<String, String>? headers,
   }) {
+    if (urlModifier != null) {
+      url = urlModifier!(url);
+    }
     final postHeaders = {
       'Content-type': 'application/json',
     };
@@ -84,8 +97,7 @@ abstract class GoogleWebService {
 
 DateTime dayTimeToDateTime(int day, String time) {
   if (time.length < 4) {
-    throw ArgumentError(
-        "'time' is not a valid string. It must be four integers.");
+    throw ArgumentError("'time' is not a valid string. It must be four integers.");
   }
 
   day = day == 0 ? DateTime.sunday : day;
