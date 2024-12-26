@@ -1,6 +1,6 @@
 ## 0.0.24
 
-- remove meta, test and coverage package
+- Dependency update
 
 ## 0.0.23
 
