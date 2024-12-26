@@ -27,7 +27,7 @@ GeolocationErrorResponse _$GeolocationErrorResponseFromJson(
               ?.map((e) => GeolocationError.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
-      code: json['code'] as int,
+      code: (json['code'] as num).toInt(),
       message: json['message'] as String,
     );
 
