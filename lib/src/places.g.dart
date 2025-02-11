@@ -155,7 +155,7 @@ PlaceDetails _$PlaceDetailsFromJson(Map<String, dynamic> json) => PlaceDetails(
       servesVegetarianFood: json['serves_vegetarian_food'] as bool?,
       servesWine: json['serves_wine'] as bool?,
       takeout: json['takeout'] as bool?,
-      userRatingsTotal: json['user_ratings_total'] as int?,
+      userRatingsTotal: (json['user_ratings_total'] as num?)?.toInt(),
       wheelChairAccessibleEntrance:
           json['wheel_chair_accessible_entrance'] as bool?,
     );
@@ -253,7 +253,7 @@ Map<String, dynamic> _$PlusCodeToJson(PlusCode instance) => <String, dynamic>{
 OpeningHoursPeriodDate _$OpeningHoursPeriodDateFromJson(
         Map<String, dynamic> json) =>
     OpeningHoursPeriodDate(
-      day: json['day'] as int,
+      day: (json['day'] as num).toInt(),
       time: json['time'] as String,
     );
 
@@ -380,7 +380,7 @@ Prediction _$PredictionFromJson(Map<String, dynamic> json) => Prediction(
               ?.map((e) => Term.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
-      distanceMeters: json['distance_meters'] as int?,
+      distanceMeters: (json['distance_meters'] as num?)?.toInt(),
       placeId: json['place_id'] as String?,
       reference: json['reference'] as String?,
       types:
